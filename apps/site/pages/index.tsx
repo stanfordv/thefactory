@@ -10,16 +10,17 @@ export function Index() {
             <Image
               src='/subroutineID_round.jpg'
               alt="Soundcloud"
-              height={500}
-              width={500}
+              height={400}
+              width={400}
 
             />
 
-          </div></span> <h3 className="text-2xl mb-8">
+          </div></span> <h3 className="text-xl mb-8">
             <span className="text-zinc-600 ">
               Optimistic post-apocalyptic mysticism
             </span>
-          </h3><div className="mt-8 ml-28 flex lg:mt-0">
+          </h3>
+          <div className="mt-8 ml-16 flex lg:mt-0">
             <div className="rounded-md shadow">
               <a
                 href="https://soundcloud.com/thesubroutine/looking-up-high"
