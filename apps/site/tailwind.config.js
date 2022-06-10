@@ -56,20 +56,7 @@ module.exports = {
       letterSpacing: {
         widest: '0.3em',
       },
-      imageContainer: {
-        width: '50vw',
-        height: '50vh',
-        position: 'relative',
-    
-        image: {
-            width: '100%',
-            height: '100%',
-           
-            objectFit: 'cover', // Optional
-        }
-      },
-    
-  },
+    },
   },
   variants: {
     extend: {},
