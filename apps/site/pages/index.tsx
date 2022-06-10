@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export function Index() {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50" place-content-center>
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
         <div className="text-3xl font-mono tracking-tight text-gray-900 sm:text-4xl">
           <span className="block"><div className="items-center justify-center px-1 py-1 border bg-white"
@@ -15,12 +15,12 @@ export function Index() {
 
             />
 
-          </div></span> <h3 className="text-xl mb-8">
+          </div></span> <h3 className="text-base text-center mb-8">
             <span className="text-zinc-600 ">
               Optimistic post-apocalyptic mysticism
             </span>
           </h3>
-          <div className="mt-8 ml-16 flex lg:mt-0">
+          <div className="mt-8 place-content-center flex lg:mt-0">
             <div className="rounded-md shadow">
               <a
                 href="https://soundcloud.com/thesubroutine/looking-up-high"
@@ -38,7 +38,7 @@ export function Index() {
                 </div>
               </a>
             </div>
-            <div className="ml-4 inline-flex rounded-md shadow ">
+            <div className="ml-4 inline-flex rounded-md shadow">
               <a
                 href="https://open.spotify.com/artist/3HdPgI00Jz1qViim7N0zpw?si=pzMWop4dSDqhtbajvifHWQ"
                 target="_blank"
@@ -52,14 +52,9 @@ export function Index() {
                     className="rounded-full"
                   />
                 </div>
-
               </a>
             </div>
           </div></div>
-
-
-
-
       </div >
     </div >
   );
