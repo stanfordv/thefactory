@@ -1,8 +1,9 @@
-//import 'tailwindcss/tailwind.css';
-import './global.css';
+import 'tailwindcss/tailwind.css';
 
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+
+//import './global.css';
 
 
 

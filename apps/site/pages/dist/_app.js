@@ -11,9 +11,9 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-//import 'tailwindcss/tailwind.css';
-require("./global.css");
+require("tailwindcss/tailwind.css");
 var head_1 = require("next/head");
+//import './global.css';
 function CustomApp(_a) {
     var Component = _a.Component, pageProps = _a.pageProps;
     return (React.createElement(React.Fragment, null,
