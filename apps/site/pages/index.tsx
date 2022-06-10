@@ -6,7 +6,7 @@ export function Index() {
           <span className="block">The Subroutine</span></h2>
         <h3 className="text-2xl">
           <span className="block text-indigo-600 ">
-            Post apocalyptic optimism! 
+            Post apocalyptic optimism
           </span>
         </h3>
 
