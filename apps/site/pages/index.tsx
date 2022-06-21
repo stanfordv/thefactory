@@ -24,11 +24,11 @@ export function Index() {
             </span>
           </div>
           <div className="mt-8 place-content-center flex lg:mt-0 ">
-            <div className="rounded-md shadow">
+            <div className="inline-flex justify-center px-5 py-3 border text-base font-medium rounded-md text-white bg-orange-500 hover:bg-black rounded-md shadow">
               <a
                 href="https://soundcloud.com/thesubroutine/looking-up-high"
                 target="_blank"
-                className="inline-flex justify-center px-5 py-3 border text-base font-medium rounded-md text-white bg-orange-500 hover:bg-black" rel="noreferrer"
+                rel="noreferrer"
               ><div className="h-10 w-20 relative">
                   <Image
                     src='/SoundcloudLogo.png'
@@ -41,18 +41,20 @@ export function Index() {
                 </div>
               </a>
             </div>
-            <div className="ml-4 inline-flex rounded-md shadow">
+            <div className="ml-4 inline-flex rounded-md shadow lg:mt-0 inline-flex items-center justify-center px-5 py-3 border text-base font-medium rounded-md text-indigo-500 bg-black hover:bg-white">
               <a
                 href="https://open.spotify.com/artist/3HdPgI00Jz1qViim7N0zpw?si=pzMWop4dSDqhtbajvifHWQ"
                 target="_blank"
-                className="inline-flex items-center justify-center px-5 py-3 border text-base font-medium rounded-md text-indigo-500 bg-white hover:bg-sky-500" rel="noreferrer"
-              ><div className="h-10 w-20 relative  items-center">
+                rel="noreferrer"
+              ><div className="h-10 w-20 relative p-1">
                   <Image
                     src='/spotifyLogo4.png'
                     alt="Spotify"
-                    width={90}
-                    height={45}
-                    className="rounded-full"
+                    width={70}
+                    height={35}
+
+
+
                   />
                 </div>
               </a>
