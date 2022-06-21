@@ -13,7 +13,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Inside the Subroutine</title>
       </Head>
-      <main className="app">
+      <main className="app" >
         <Component {...pageProps} />
       </main>
     </>

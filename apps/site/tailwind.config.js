@@ -2,7 +2,6 @@ const { createGlobPatternsForDependencies } = require('@nrwl/next/tailwind');
 const { join } = require('path');
 
 module.exports = {
- 
   content: [
     join(__dirname, 'pages/**/*.{js,ts,jsx,tsx}'),
     join(__dirname, 'components/**/*.{js,ts,jsx,tsx}'),
@@ -56,6 +55,13 @@ module.exports = {
       letterSpacing: {
         widest: '0.3em',
       },
+    },
+    fontFamily: {
+      sans: ['ui-sans-serif', 'system-ui'],
+      serif: ['ui-serif', 'Georgia'],
+      mono: ['Courier', 'SFMono-Regular'],
+      display: ['Oswald'],
+      body: ['"Open Sans"'],
     },
   },
   variants: {
