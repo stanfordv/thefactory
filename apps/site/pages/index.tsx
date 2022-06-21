@@ -17,7 +17,7 @@ export function Index() {
 
           </div></span> <h3 className="text-base text-center mb-8">
             <span className="text-zinc-600 ">
-              Optimistic post-apocalyptic mysticism
+              Post-apocalyptic Optimism
             </span>
           </h3>
           <div className="mt-8 place-content-center flex lg:mt-0">
