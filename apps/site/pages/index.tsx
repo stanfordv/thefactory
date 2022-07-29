@@ -20,7 +20,7 @@ export function Index() {
           </span>
           <div className="text-base text-center  mb-8 p-2 ">
             <span className="text-xl pb-2 text-slate-100 font-light">
-              Alter Echo
+              * Alter Echo *
             </span>
           </div>
           <div className="mt-8 place-content-center flex lg:mt-0 ">
