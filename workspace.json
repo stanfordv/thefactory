@@ -2,8 +2,8 @@
     "$schema": "./node_modules/nx/schemas/workspace-schema.json",
     "version": 2,
     "projects": {
-        "poenix-poenix": "apps/poenix/poenix",
-        "poenix-poenix-e2e": "apps/poenix/poenix-e2e",
+        "poenix": "apps/poenix",
+        "poenix-e2e": "apps/poenix-e2e",
         "thesubroutine": "apps/thesubroutine",
         "thesubroutine-e2e": "apps/thesubroutine-e2e",
         "suburbanmoss": "apps/suburbanmoss",

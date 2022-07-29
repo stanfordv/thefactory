@@ -1,0 +1,60 @@
+{
+    "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "apps/poenix",
+    "projectType": "application",
+    "targets": {
+        "build": {
+            "executor": "@nrwl/next:build",
+            "outputs": ["{options.outputPath}"],
+            "defaultConfiguration": "production",
+            "options": {
+                "root": "apps/poenix",
+                "outputPath": "dist/apps/poenix"
+            },
+            "configurations": {
+                "development": {},
+                "production": {}
+            }
+        },
+        "serve": {
+            "executor": "@nrwl/next:server",
+            "defaultConfiguration": "development",
+            "options": {
+                "buildTarget": "poenix:build",
+                "dev": true
+            },
+            "configurations": {
+                "development": {
+                    "buildTarget": "poenix:build:development",
+                    "dev": true
+                },
+                "production": {
+                    "buildTarget": "poenix:build:production",
+                    "dev": false
+                }
+            }
+        },
+        "export": {
+            "executor": "@nrwl/next:export",
+            "options": {
+                "buildTarget": "poenix:build:production"
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/apps/poenix"],
+            "options": {
+                "jestConfig": "apps/poenix/jest.config.js",
+                "passWithNoTests": true
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["apps/poenix/**/*.{ts,tsx,js,jsx}"]
+            }
+        }
+    },
+    "tags": []
+}
