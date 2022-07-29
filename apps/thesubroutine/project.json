@@ -1,6 +1,6 @@
 {
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "apps/site",
+    "sourceRoot": "apps/thesubroutine",
     "projectType": "application",
     "targets": {
         "build": {
@@ -8,8 +8,8 @@
             "outputs": ["{options.outputPath}"],
             "defaultConfiguration": "production",
             "options": {
-                "root": "apps/site",
-                "outputPath": "dist/apps/site"
+                "root": "apps/thesubroutine",
+                "outputPath": "dist/apps/thesubroutine"
             },
             "configurations": {
                 "development": {},
@@ -20,16 +20,16 @@
             "executor": "@nrwl/next:server",
             "defaultConfiguration": "development",
             "options": {
-                "buildTarget": "site:build",
+                "buildTarget": "thesubroutine:build",
                 "dev": true
             },
             "configurations": {
                 "development": {
-                    "buildTarget": "site:build:development",
+                    "buildTarget": "thesubroutine:build:development",
                     "dev": true
                 },
                 "production": {
-                    "buildTarget": "site:build:production",
+                    "buildTarget": "thesubroutine:build:production",
                     "dev": false
                 }
             }
@@ -37,14 +37,14 @@
         "export": {
             "executor": "@nrwl/next:export",
             "options": {
-                "buildTarget": "site:build:production"
+                "buildTarget": "thesubroutine:build:production"
             }
         },
         // "test": {
         //   "executor": "@nrwl/jest:jest",
-        //   "outputs": ["coverage/apps/site"],
+        //   "outputs": ["coverage/apps/thesubroutine"],
         //   "options": {
-        //     "jestConfig": "apps/site/jest.config.ts",
+        //     "jestConfig": "apps/thesubroutine/jest.config.ts",
         //     "passWithNoTests": true
         //   }
         // },
@@ -52,7 +52,7 @@
             "executor": "@nrwl/linter:eslint",
             "outputs": ["{options.outputFile}"],
             "options": {
-                "lintFilePatterns": ["apps/site/**/*.{ts,tsx,js,jsx}"]
+                "lintFilePatterns": ["apps/thesubroutine/**/*.{ts,tsx,js,jsx}"]
             }
         }
     },
