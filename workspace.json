@@ -5,6 +5,8 @@
     "poenix-poenix": "apps/poenix/poenix",
     "poenix-poenix-e2e": "apps/poenix/poenix-e2e",
     "site": "apps/site",
-    "site-e2e": "apps/site-e2e"
+    "site-e2e": "apps/site-e2e",
+    "suburbanmoss": "apps/suburbanmoss",
+    "suburbanmoss-e2e": "apps/suburbanmoss-e2e"
   }
 }
