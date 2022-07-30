@@ -6,6 +6,7 @@
         "build": {
             "executor": "@nrwl/next:build",
             "outputs": ["{options.outputPath}"],
+            "tsConfig": ["{options.tsConfig}"],
             "defaultConfiguration": "production",
             "options": {
                 "root": "apps/suburbanmoss",
@@ -16,7 +17,13 @@
                 "development": {
                     "outputPath": "tmp/apps/suburbanmoss"
                 },
-                "production": {}
+                "production": {
+                    "options": {
+                        "root": "apps/suburbanmoss",
+                        "outputPath": "dist/apps/suburbanmoss",
+                        "tsConfig": "libs/suburbanmossLibs/tsconfig.lib.json"
+                    }
+                }
             }
         },
         "serve": {
