@@ -9,47 +9,49 @@
             "defaultConfiguration": "production",
             "options": {
                 "root": "apps/suburbanmoss",
-                "outputPath": "dist/apps/suburbanmoss"
-            },
-            "configurations": {
-                "development": {
-                    "outputPath": "tmp/apps/suburbanmoss"
-                },
-                "production": {}
+                "outputPath": "dist/apps/suburbanmoss",
+                "tsConfig": "libs/mylib/tsconfig.lib.json"
             }
         },
-        "serve": {
-            "executor": "@nrwl/next:server",
-            "defaultConfiguration": "development",
-            "options": {
-                "buildTarget": "suburbanmoss:build",
+        "configurations": {
+            "development": {
+                "outputPath": "tmp/apps/suburbanmoss"
+            },
+            "production": {}
+        }
+    },
+    "serve": {
+        "executor": "@nrwl/next:server",
+        "defaultConfiguration": "development",
+        "options": {
+            "buildTarget": "suburbanmoss:build",
+            "dev": true
+        },
+        "configurations": {
+            "development": {
+                "buildTarget": "suburbanmoss:build:development",
                 "dev": true
             },
-            "configurations": {
-                "development": {
-                    "buildTarget": "suburbanmoss:build:development",
-                    "dev": true
-                },
-                "production": {
-                    "buildTarget": "suburbanmoss:build:production",
-                    "dev": false
-                }
-            }
-        },
-        "export": {
-            "executor": "@nrwl/next:export",
-            "options": {
-                "buildTarget": "suburbanmoss:build:production"
-            }
-        },
-
-        "lint": {
-            "executor": "@nrwl/linter:eslint",
-            "outputs": ["{options.outputFile}"],
-            "options": {
-                "lintFilePatterns": ["apps/suburbanmoss/**/*.{ts,tsx,js,jsx}"]
+            "production": {
+                "buildTarget": "suburbanmoss:build:production",
+                "dev": false
             }
         }
     },
-    "tags": []
+    "export": {
+        "executor": "@nrwl/next:export",
+        "options": {
+            "buildTarget": "suburbanmoss:build:production"
+        }
+    },
+
+    "lint": {
+        "executor": "@nrwl/linter:eslint",
+        "outputs": ["{options.outputFile}"],
+        "options": {
+            "lintFilePatterns": ["apps/suburbanmoss/**/*.{ts,tsx,js,jsx}"]
+        }
+    }
+},
+"tags": []
 }
