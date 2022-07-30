@@ -5,8 +5,7 @@
     "scripts": {
         "start": "nx serve",
         "build": "nx build",
-        "test": "nx test",
-        "vercel-build": "nx build thesubroutine --prod"
+        "test": "nx test"
     },
     "private": true,
     "dependencies": {
