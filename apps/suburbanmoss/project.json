@@ -10,48 +10,54 @@
             "options": {
                 "root": "apps/suburbanmoss",
                 "outputPath": "dist/apps/suburbanmoss",
-                "tsConfig": "libs/mylib/tsconfig.lib.json"
+                "tsConfig": "libs/suburbanmossLibs/tsconfig.lib.json"
+            },
+            "configurations": {
+                "development": {
+                    "outputPath": "tmp/apps/suburbanmoss"
+                },
+                "production": {}
             }
         },
-        "configurations": {
-            "development": {
-                "outputPath": "tmp/apps/suburbanmoss"
-            },
-            "production": {}
-        }
-    },
-    "serve": {
-        "executor": "@nrwl/next:server",
-        "defaultConfiguration": "development",
-        "options": {
-            "buildTarget": "suburbanmoss:build",
-            "dev": true
-        },
-        "configurations": {
-            "development": {
-                "buildTarget": "suburbanmoss:build:development",
+        "serve": {
+            "executor": "@nrwl/next:server",
+            "defaultConfiguration": "development",
+            "options": {
+                "buildTarget": "suburbanmoss:build",
                 "dev": true
             },
-            "production": {
-                "buildTarget": "suburbanmoss:build:production",
-                "dev": false
+            "configurations": {
+                "development": {
+                    "buildTarget": "suburbanmoss:build:development",
+                    "dev": true
+                },
+                "production": {
+                    "buildTarget": "suburbanmoss:build:production",
+                    "dev": false
+                }
+            }
+        },
+        "export": {
+            "executor": "@nrwl/next:export",
+            "options": {
+                "buildTarget": "suburbanmoss:build:production"
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/apps/suburbanmoss"],
+            "options": {
+                "jestConfig": "apps/suburbanmoss/jest.config.ts",
+                "passWithNoTests": true
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["apps/suburbanmoss/**/*.{ts,tsx,js,jsx}"]
             }
         }
     },
-    "export": {
-        "executor": "@nrwl/next:export",
-        "options": {
-            "buildTarget": "suburbanmoss:build:production"
-        }
-    },
-
-    "lint": {
-        "executor": "@nrwl/linter:eslint",
-        "outputs": ["{options.outputFile}"],
-        "options": {
-            "lintFilePatterns": ["apps/suburbanmoss/**/*.{ts,tsx,js,jsx}"]
-        }
-    }
-},
-"tags": []
+    "tags": []
 }
