@@ -5,6 +5,7 @@
     "next/core-web-vitals",
     "../../.eslintrc.json"
   ],
+
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {
@@ -30,5 +31,15 @@
   },
   "env": {
     "jest": true
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "project": "**/tsconfig.json"
+      }
+    }
   }
 }
