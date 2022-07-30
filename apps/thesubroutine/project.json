@@ -40,14 +40,7 @@
                 "buildTarget": "thesubroutine:build:production"
             }
         },
-        // "test": {
-        //   "executor": "@nrwl/jest:jest",
-        //   "outputs": ["coverage/apps/thesubroutine"],
-        //   "options": {
-        //     "jestConfig": "apps/thesubroutine/jest.config.ts",
-        //     "passWithNoTests": true
-        //   }
-        // },
+
         "lint": {
             "executor": "@nrwl/linter:eslint",
             "outputs": ["{options.outputFile}"],
